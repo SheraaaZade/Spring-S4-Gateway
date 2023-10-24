@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @Repository
 @FeignClient(name = "products")
 public interface ProductsProxy {
+
   @GetMapping("/products")
   Iterable<Product> readAll();
 
